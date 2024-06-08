@@ -1,0 +1,8 @@
+<div class="process-root ">
+   <div class="flex process-wrapper">
+    <div class="process-step-wrapper " *ngFor="let step of process">
+        <img [src]="step.image">
+        <p>{{step.description}}</p>
+    </div>
+   </div>
+</div>

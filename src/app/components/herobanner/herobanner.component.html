@@ -1,0 +1,30 @@
+
+    <div class="herobanner-root">
+        <div class="herobanner-parent">
+            
+        <div class="navigation-map-wrapper">
+            <app-navigationmap></app-navigationmap>    
+        </div>
+    
+        <div class="hero-banner-content-wrapper">
+    
+                <h1 class="bold">Essay Blues? We sing a different tune and write it for you.</h1>
+                <button class="order-button bold pointer">Order Now</button>
+    
+                <div class="flex flex-wrap wrapper-class justify-between">
+                    <div *ngFor="let item of achievements" class="flex card-flex">
+                            <div class="image-background flex align-center justify-center">
+                                <img  class="image-wrapper" [src]="item.image">
+                            </div> 
+                            <div class="margin-left">
+                                <h4>{{item.value}}</h4>
+                                <p> {{item.description}}</p>
+                            </div>
+                    </div>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+

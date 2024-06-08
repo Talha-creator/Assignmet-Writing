@@ -1,0 +1,141 @@
+.questions-root{
+    background: #F5F5F5;
+    width: 100%;
+    margin:auto auto;
+    padding:4rem 0;
+    .questions-parent{
+        width: 85%;
+        margin:auto auto;
+    }
+}
+h1{
+    width: 650px;
+    font-weight: 700;
+font-size: 39px;
+line-height: 120%;
+letter-spacing: 0.005em;
+color: #11142D;
+}
+.questions-list-wrapper{
+    padding:.2rem 1rem;
+    height:600px;
+    overflow-y: auto;
+}
+
+
+
+.desc::-webkit-scrollbar , .questions-list-wrapper::-webkit-scrollbar {
+     width: 5px;
+ }
+.questions-list-wrapper::-webkit-scrollbar-track {
+    //  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background: #E5E5E5; 
+     border-radius: 4px;
+ }
+  
+ .desc::-webkit-scrollbar-track{
+    background: white; 
+ }
+ 
+ .desc::-webkit-scrollbar-thumb  ,.questions-list-wrapper::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     background: #117BD4;
+ }
+
+.question-description-wrapper{
+    margin-left:5rem;
+    background: var(--primaryColor);
+    color:white;
+    flex-basis:50%;
+    padding :2rem;
+    
+    p{
+        padding-right: 1rem;
+        font-family:  walsheim-thin !important;
+    font-weight: 300;
+    height:500px;
+    overflow-y: auto;
+    font-size: 27px;
+    line-height: 31px;
+    text-align: justify;
+    color: #FFFFFF;
+    
+    }
+}
+
+.row-wrapper{
+    
+    margin-bottom :2rem;
+}
+span{
+    width: 15px;
+    display: flex;
+    box-shadow: -1px 2px 10px rgba(124, 124, 124, 0.5);
+}
+.question-text{
+    display: flex;
+    
+    padding:1rem 1rem 2rem 1rem;
+    width: 350px;
+    // height: 70px;
+    box-shadow: 0px 2px 10px rgba(124, 124, 124, 0.5);
+    font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+font-weight: 300;
+color: #2B3543;
+
+&:hover{
+    background: var(--primaryColor);
+    color: #FFFFFF;
+}
+}
+
+
+
+//screen responsive 
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+    .questions-root {
+      margin:auto auto auto auto;
+      max-width:70vw;
+ 
+    }
+    
+  }
+  
+  @media  (min-width: 2560px) and (max-width: 3840px) {
+    .questions-root {
+      margin:auto auto auto auto;
+      max-width:50vw;
+    
+    }
+    
+  }
+  
+  @media  (min-width: 3840px) and (max-width: 5120px) {
+    .questions-root {
+      margin:auto auto auto auto;
+      max-width:40vw;
+    
+    }
+    
+  }
+  
+  @media  (min-width: 5120px) and (max-width: 7680px) {
+    .questions-root {
+      margin:auto auto auto auto;
+      max-width:30vw;
+
+    }
+   
+  }
+  
+  @media  (min-width: 7680px) {
+    .questions-root {
+      margin:auto auto auto auto;
+      max-width:20vw;
+   
+    }
+    
+  }

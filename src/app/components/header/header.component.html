@@ -1,0 +1,15 @@
+<div class="header-root">
+    <div class="header-wrapper flex justify-between">
+        <div class="options-wrapper flex justify-between">
+            <div  class="flex align-center single-option" *ngFor="let item of headerOptions">
+                <img [src]="item.icon">
+                <span>{{item.text}}</span>
+            </div>
+        </div>
+    
+        <div class="buttons-wrapper">
+            <button class="login-signup-button pointer custom-button">Login or Signup</button>
+            <button class="order-button pointer custom-button">Order Now</button>
+        </div>
+    </div>
+</div>

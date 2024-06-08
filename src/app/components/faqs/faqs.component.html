@@ -1,0 +1,27 @@
+<div class="faqs-root">
+    <div class="faqs-parent">
+        <h1 class="global-h1styling">Frequently asked questions</h1>
+
+       
+            <div class="question-item-wrapper" *ngFor="let singleItem of faqsList ;let i=index">
+                <div class="question-row-wrapper flex align-center justify-between">
+                    <!-- showAnswer(singleItem) -->
+                    <div class="flex align-center"><span>Q.</span> <h3>{{singleItem.question}}</h3></div>  <fa-icon [ngClass]="singleItem.status?'rotate':'normal'" [icon]="faChevronDown" class="" (click)="(i==2)?toggleShowDiv('answer-row-wrapper' ,singleItem):''"></fa-icon>
+                </div>
+                <div>
+                    <div *ngIf="i==2" class="answer-row-wrapper" [@slideInOut]="animationState">
+                        <div class="flex align-center"><span>A.</span> <h4>{{faqsList[0].answer}}</h4></div>  
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex align-center viewall-text justify-center">
+                <h6>View All frequently asked Questions </h6><img src="../../../assets/icons/arrow-right.svg">
+            </div>
+            
+        
+    </div>    
+
+   
+</div>

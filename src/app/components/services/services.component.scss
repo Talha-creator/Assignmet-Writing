@@ -1,0 +1,166 @@
+.services-root{
+    background: #F5F5F5;
+    width: 100%;
+    margin:auto auto;
+    padding:4rem 0;
+background-position: right center;
+    background-image:  url('../../../assets/images/Ornament.svg');
+    background-repeat: no-repeat;
+    .services-parent{
+        width:85%;
+        margin: auto auto;
+    }
+}
+.icon-wrapper
+{
+    background : white;
+    height: 40px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;;
+    border-radius: 50%;
+    &:hover{
+        background : var(--primaryColor);
+        ::ng-deep .svg-inline--fa{
+            color:white;
+        }
+
+    }
+    
+}
+.swiper-left{
+    margin-right: 1rem;;
+}
+:host ::ng-deep .svg-inline--fa{
+    color:var(--primaryColor);
+   
+}
+h1{
+    width: 435px;
+    font-weight: 700;
+font-size: 39px;
+line-height: 120%;
+letter-spacing: 0.005em;
+color: #11142D;
+}
+
+
+
+
+
+
+//swipper styling
+.swiper-wrapper-custom{
+    padding:3.5rem 1rem;
+    background-position: left top;
+    background-image:  url('../../../assets/images/Ornamentdot.svg');
+    background-repeat: no-repeat;
+}
+
+.active-card{
+    background: var(--primaryColor) !important;
+
+    .index-wrapper{
+        color:var(--button-text-color) !important;
+        background-color: white !important;
+    }
+    h2{
+        color:white !important; 
+    }
+    p{
+        color:white !important; 
+    }
+}
+.service-card-wrapper{
+    margin-right:1rem;
+    background: white;
+    padding:3rem 2rem;
+    width: 320px;
+
+    h2{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.003em;
+        color: #11142D;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: justify;
+        color: #9A9AB0;
+    }
+    .index-wrapper{
+        height: 66px;
+        font-weight: 700;
+        width: 66px;
+        color:white;
+        font-size:30px;
+        border-radius: 50%;
+        background-color: var(--primaryColor);
+    }
+}
+.swiper-icons-wrapper{
+    img {
+        // filter: brightness(0) invert(1);
+        filter: invert(32%) sepia(96%) saturate(940%) hue-rotate(181deg) brightness(101%) contrast(99%);
+        background:white ;
+    }
+}
+:host ::ng-deep  .swiper-wrapper{
+    // width: 60rem;;
+    display: flex !important;
+  }
+
+
+
+
+
+  //screen responsive 
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+    .services-root {
+      margin:auto auto auto auto;
+      max-width:70vw;
+ 
+    }
+    
+  }
+  
+  @media  (min-width: 2560px) and (max-width: 3840px) {
+    .services-root {
+      margin:auto auto auto auto;
+      max-width:50vw;
+    
+    }
+    
+  }
+  
+  @media  (min-width: 3840px) and (max-width: 5120px) {
+    .services-root {
+      margin:auto auto auto auto;
+      max-width:40vw;
+    
+    }
+    
+  }
+  
+  @media  (min-width: 5120px) and (max-width: 7680px) {
+    .services-root {
+      margin:auto auto auto auto;
+      max-width:30vw;
+
+    }
+   
+  }
+  
+  @media  (min-width: 7680px) {
+    .services-root {
+      margin:auto auto auto auto;
+      max-width:20vw;
+   
+    }
+    
+  }

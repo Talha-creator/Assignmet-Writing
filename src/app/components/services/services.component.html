@@ -1,0 +1,43 @@
+<div class="services-root">
+    <div class="services-parent">
+        <h1>Essay writing services we offer</h1>
+        <div class="swiper-icons-wrapper flex align-center justify-end">
+        
+            
+            <div class="icon-wrapper pointer swiper-left" >
+                <fa-icon [icon]="faChevronLeft" class="swiper-icon "></fa-icon>
+            </div>
+            <div class="icon-wrapper pointer swiper-right">
+            <fa-icon [icon]="faChevronRight" class="swiper-icon "></fa-icon>
+        </div>
+        </div>
+    
+    
+       <div class="swiper-wrapper-custom ">
+        <swiper
+        [navigation]="{ prevEl: '.swiper-left', nextEl: '.swiper-right' }"
+        [breakpoints]="breakpoints"
+        [slidesPerView]="2"
+        class="mySwiper"
+        >
+        <ng-template swiperSlide *ngFor="let data of  services;let i=index"  >
+          <div class="service-card-wrapper" [ngClass]="(data.status)?'active-card':''">
+            <div class="index-wrapper flex align-center justify-center">{{data.index}}</div>
+            <h2>{{data.heading}}</h2>
+            <p>{{data.description}}</p>
+          </div>
+        </ng-template>
+               </swiper>
+       </div>
+    </div>
+    
+    
+
+
+  
+
+
+   
+</div>
+
+

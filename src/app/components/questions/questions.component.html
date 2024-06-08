@@ -1,0 +1,20 @@
+<div class="questions-root">
+    <div class="questions-parent">
+
+        <h1>Essay writer - custom essay writing services</h1>
+
+        <div class="flex ">
+            <div class="questions-list-wrapper">
+                <div *ngFor="let question of questionsList" class="flex row-wrapper" >
+                  <span></span>  
+                  <div class="question-text pointer" (click)="makeQuestionActive(question)">
+                    {{question.question}}
+                  </div>
+                </div>
+            </div>
+            <div class="question-description-wrapper">
+                <p class="desc">{{descriptionText}}</p>
+            </div>
+        </div>
+    </div>
+</div>

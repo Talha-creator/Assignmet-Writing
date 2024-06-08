@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: walsheim;
+    src:url('../src/assets/fonts/GT-Walsheim-Pro-Regular-Regular.ttf')
+}
+@font-face {
+    font-family: lato;
+    src:url('../src/assets/fonts/Lato/Lato-Regular.ttf')
+}
+@font-face {
+    font-family: circulatstd;
+    src:url('../src/assets/fonts/circular-std-medium-500.ttf')
+}
+@font-face {
+    font-family: walsheim-thin;
+    src:url('../src/assets/fonts/GT-Walsheim-Pro-Thin.ttf')
+}
+// Swiper Library //
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+*{
+    font-family: walsheim;
+}
+body{
+    margin: 0  !important;
+}
+:root{
+
+    --primaryColor:#117BD4;
+    --button-text-color:#013A65;
+}
+
+//utility classes
+
+.flex{
+    display: flex;
+} 
+.flex-column{
+flex-direction: column;
+}    
+.justify-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-end{
+    justify-content: end;
+}
+.justify-start{
+    justify-content: start !important;
+}
+.align-center{
+    align-items: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.bold{
+    font-weight: 700 !important;
+}
+.global-h1styling{
+  
+            font-weight: 700;
+            font-size: 39px;
+            text-align: center;
+            letter-spacing: 0.005em;
+            color: #11142D;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+//custom loader styling  as the one in figma was not accessible 
+.loader {
+    margin-right:1rem;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+    
+    .green-border {
+        border-color: #13ad35 !important;
+      }

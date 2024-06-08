@@ -1,0 +1,170 @@
+<div class="pricing-component-root">
+
+    <div class="content-right-wrapper">
+        <div class="light-font">Follow the steps to place your order!</div>
+    <div class="flex justify-between align-center margin-2" >
+        <div class="main-heading">Calculate Price </div>
+        <div class="active-step"> 1 of 3</div>
+    </div>
+    
+    <div class="steps-parent flex justify-between">
+        <div *ngFor="let step of processSteps ;" class="single-step">
+            <div [ngClass]="step.status?'fill':''" class="progress-bar"></div>
+            <div *ngIf="!(step.status)" class="lebel-text margin-2">{{step.label}}</div>
+        </div>
+    </div>
+    </div>
+    
+        
+        
+    <div class="flex margin-top">
+        
+        <div class="content-right-wrapper ">
+    
+            <div class="form-wrapper">
+                <div class="form-parent">
+                    <form class="form flex-column" [formGroup]="emailform">
+                        <label>Email Address *</label>
+                        <div class="flex"><input [ngClass]="!(emailform.invalid)?'green-border':''"  placeholder="example@gmail.com" formControlName="email"><img *ngIf="!(emailform.invalid)" src="../../../assets/icons/green.svg"> </div>
+                    </form>
+                </div>
+                <div class="form-parent">
+                    <!-- <form class="form flex-column" [formGroup]="emailform">
+                        <label>Email Address *</label>
+                        <div class="flex"><input [ngClass]="!(emailform.invalid)?'green-border':''"  placeholder="example@gmail.com" formControlName="email"><img *ngIf="!(emailform.invalid)" src="../../../assets/icons/green.svg"> </div>
+                    </form> -->
+                </div>
+    
+    
+                <div class="flex line-wrapper justify-between align-center">
+                    <hr>CALCULATE PRICE <hr>
+                </div>
+    
+                <div>
+                    <div class="form-parent">
+                          
+                            <label>Document Type *</label>
+                            <div class="dropdown-header flex justify-between">
+                                    <span>What can we do for you? </span> <img src="../../../assets/icons/carrot.svg">
+                            </div>
+                            
+    
+                            <div class="dropdown">
+                                <label class="margin-top">Acedemic Level *</label>
+                                <div class="dropdown-header flex justify-between" [ngClass]="showDropDown?'highlight':''" (click)="showDropDown= !showDropDown">
+                                        <span>You study at? </span> <img [ngClass]="showDropDown?'normal':'rotate'" src="../../../assets/icons/carrot.svg" >
+                                </div>
+                       
+                                <div  class="section-dropdown" [ngClass]="(showDropDown)?'show':'hide-display'" > 
+                                
+                                    <div  class="wrapper">
+                                    <label>High school</label>
+                                    <label>College - Undergraduate</label>
+                                    <label>Master</label>
+                                    <label>Doctoral</label>
+                                    </div>
+                                   
+        
+                                </div>
+                            </div>
+    
+                            <div class="flex justify-between">
+                                <div class="flex-40 dropdown">
+                                    <label>Number of Pages *</label>
+                               
+                                    <div class=" flex counter-wrapper">
+                                        <div [ngClass]="(pages==1)?'color-grey':''" class="counter pointer left" (click)="subPage()"> - </div> <input  class='page-input ' type="number" [(ngModel)]="pages"> <div class="counter pointer right" (click)="addPage()" > + </div>
+                                    </div>
+                                    <span class="flex justify-center count">{{pages*300}} words</span>
+                               </div>
+
+                               <div class="flex-50 dropdown">
+                                <label>Deadline *</label>
+                             
+                                <div class=" flex justify-between date-Wrapper">
+                                 
+                                    <input  class='date-input form-control date' placeholder="YYYY-MM-DD" type="date" [(ngModel)]="dateObject.date"   [ngClass]="(dateObject.date)?'green-border':''" >
+                                   <input   class='date-input without_ampm time'  placeholder="YYYY-MM-DD" type="time" [(ngModel)]="dateObject.time" ng-change=" getMeridian()" [ngClass]="(dateObject.time)?'green-border':''">
+                                    <div [ngClass]="(dateObject.zone)?'green-border':''" class='meridian meridian'>{{dateObject.zone}}</div> 
+                                </div>
+                               
+                           </div>
+        
+        
+        
+                               
+                            </div>
+    
+                        <button class="next-button" (click)="showDateValue()" > Next Step</button>
+                  
+    
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+            <div>
+                <div class="summary-card-wrapper">
+                    <div class="custom-padding">
+                        <h3>Summary</h3>
+                    <div class="flex align-center justify-between"><h4> Sub-Total:</h4> <div><span class="strike-through">$50</span><span>$30</span></div> </div>
+                    <div class="disccount-text">You save $20!</div>
+                    <hr>
+            
+                    <div class="flex align-center checkbox-wrapper">
+                        <input type="checkbox" (click)="showValues($event)"> <label class="checkbox-text">Prepay 50%</label>
+            
+                    </div>
+                    <div  *ngIf="showDiscount" class="container-paynow ">
+                        <div class="flex align-center justify-between">
+                            <label class="checkbox-text">Pay Now:</label> <h5>$15</h5>
+                        </div>
+                        <div class="flex align-center justify-between">
+                            <label class="checkbox-text">Pay After Delivery</label> <h5>$15</h5>
+                        </div>
+                        
+                      
+                    </div> 
+                    </div>
+            
+                    <div class="total-amount-wrapper flex align-center justify-between">
+                        <h4> Total:</h4>  <span>$30</span>
+                    </div>
+                    <div class="custom-padding">
+                        <div class="radio-button-text flex align-center">  <input type="radio">I agree with <a>Policies</a> and <a>Terms and Conditions</a></div>
+                        <div class="payment-heading-text">Payment Method</div>
+                        
+                        <div class="slider-wrapper flex">
+                           
+                            <div  [ngClass]="type.status?'active-card':''" *ngFor="let type of paymentTypes" class="type-wrapper" (click)="selectType(type)">
+                                    <img [src]="type.status?type.imageblue:type.imagegrey">
+                                    <p [ngClass]="type.status?'active-text':''" class="payment-type">{{type.text}}</p>
+                            </div>
+                            
+                        </div>
+                        <div *ngIf="!showBalance " [ngClass]="!(label=='card')?'show':'hide'" class="container">
+                                
+                                <div class="flex align-center justify-between">  <h4> Your Balance:</h4>  <div class="flex align-center"><h4 class="bold">$0.00</h4> <a >Top Up</a> </div></div>
+                                <div class="error-text flex align-center justify-center"> Kindly choose another method or top-up your wallet.</div>
+                                <div class="flex align-center justify-between">  <h4> Your Balance:</h4>  <div class="flex align-center"><h4 class="bold">$0.00</h4> <a >Top Up</a> </div></div>
+                                <div class="flex align-center justify-between">  <h4> To Be Paid:</h4>  <div class="flex align-center"><h4 class="bold margin-right">$0.00</h4>  </div></div>
+                                <div class="flex align-center justify-between">  <h4> Balance After:</h4>  <div class="flex align-center"><h4 class="bold margin-right">$0.00</h4>  </div></div>
+                        </div>
+            
+                        <button [ngClass]="(paymentbutton.status)?'active-background':''" (click)="submitPayment()"> <span *ngIf="paymentbutton.status" class="loader"></span>  {{(paymentbutton.status)?'You’re being redirected to Stripe':'Proceed to Payment'}}</button>
+                    </div>
+                    
+                    
+            </div>
+            <div class="margin-left">
+                <img src="../../../assets/images/cards/Group 13068.svg">
+            <img src="../../../assets/images/cards/Group 13072.svg">
+            </div>
+            </div>
+           
+    </div>
+</div>
+
+    
+    

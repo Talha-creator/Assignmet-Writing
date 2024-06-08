@@ -1,0 +1,125 @@
+.herobanner-root{
+    background-image: url('../../../assets/images/blue girl 4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // width: 100vw;
+    // height:30rem;
+    padding: 0 0 10rem 0;
+
+}
+
+.herobanner-parent{
+    width: 85%;
+    margin: auto auto;;
+}
+.navigation-map-wrapper{
+    
+}
+h1{
+    padding:3rem 0 2rem 0;
+    width:40rem;
+    font-style: normal;
+    margin-top:0;
+    font-size: 42px;
+    line-height: 62px;
+    color: #FFFFFF;
+}
+.order-button{
+    background: var(--primaryColor);
+    border-radius: 5.27184px;
+    color:#ffffff;
+   border: none;
+   padding: .5rem 3rem;;
+   letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 27px;
+
+    &:hover{
+        transform: scale(1.001);
+        transform-origin:bottom right;
+        background:#2D85CF;
+    }
+}
+.wrapper-class{
+    margin-top:1rem;
+    width: 35rem;
+    color: #ffffff;
+    .card-flex{
+   
+        padding: 1rem 0;
+    }
+    h4{
+        margin:0 ;
+        line-height: 24px;
+        font-weight: 600;
+        letter-spacing: 1px;;
+    }
+    p{
+        font-size: 15px;
+        margin: .5rem 0 0 0 ;
+        width:150px;
+        letter-spacing: .2px;;
+     
+    }
+}
+.image-background{
+    background: #E4EDFA;
+    width:75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+//utility classes 
+.margin-left{
+    margin-left:1rem;
+}
+
+
+
+
+//screen responsive 
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+    .herobanner-root {
+      margin:auto auto auto auto;
+      max-width:70vw;
+ 
+    }
+    
+  }
+  
+  @media  (min-width: 2560px) and (max-width: 3840px) {
+    .herobanner-root {
+      margin:auto auto auto auto;
+      max-width:50vw;
+    
+    }
+    
+  }
+  
+  @media  (min-width: 3840px) and (max-width: 5120px) {
+    .herobanner-root {
+      margin:auto auto auto auto;
+      max-width:40vw;
+    
+    }
+    
+  }
+  
+  @media  (min-width: 5120px) and (max-width: 7680px) {
+    .herobanner-root {
+      margin:auto auto auto auto;
+      max-width:30vw;
+
+    }
+   
+  }
+  
+  @media  (min-width: 7680px) {
+    .herobanner-root {
+      margin:auto auto auto auto;
+      max-width:20vw;
+   
+    }
+    
+  }

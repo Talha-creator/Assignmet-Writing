@@ -1,0 +1,26 @@
+.nav-map-root
+{
+    padding:1rem 0 ;
+}
+.nav-map-parent{
+    width: 100%;
+    margin:auto auto;
+    }
+h3{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #DBDBDB;
+
+    &:hover{
+        color:#ffffff;
+    }
+}
+
+.image-wrapper{
+    height:2rem;
+}
+.items-wrapper{
+    flex-basis:40%;
+    justify-content: space-between;
+}
